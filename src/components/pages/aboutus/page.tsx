@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const aboutus = () => {
+const Aboutus = () => {
   return (
     <div className='w-full'>
         This is about us page
@@ -9,4 +9,4 @@ const aboutus = () => {
   )
 }
 
-export default aboutus
+export default Aboutus
