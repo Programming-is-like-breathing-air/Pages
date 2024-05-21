@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-const Aboutus = () => {
+const layout = () => {
   return (
     <div className='w-full'>
-        This is about us page
+        This is layout page
     </div>
   )
 }
 
-export default Aboutus
+export default layout
