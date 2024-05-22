@@ -4,14 +4,13 @@ import { Label } from '@/components/ui/label'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Linkedin, Github } from 'lucide-react'
 
-import PortfolioImage from '@/image/portfolio.jpg'
 
 const Portfolio = () => {
   return (
     <div className="w-full flex flex-col items-center border border-gray-300 p-4 rounded-lg">
       {/* Secondary Navigation Bar */}
-      <div className="w-full flex items-center justify-between border-b border-gray-300 pb-2 mb-4 fixed top-16 left-0 bg-white z-10">
-        <div className="container mx-auto flex items-center justify-between px-4">
+      <div className="w-full flex items-center justify-between border-b border-gray-300 pb-2 mb-4 fixed top-16 left-0 bg-white z-10" style={{ height: '70px' }}>
+        <div className="container mx-auto flex items-center justify-between px-4" >
           <Label className="text-3xl font-bold tracking-tight">Portfolio</Label>
           <div className="flex space-x-4 ml-auto">
             <Button variant="link" className="text-black">About Me</Button>
@@ -38,10 +37,10 @@ const Portfolio = () => {
             </div>
             <div className="flex space-x-1" style={{ marginTop: '10px' }}>
               <a href="https://au.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                <Button variant="link" style={{ color: 'black', border: '2px solid gray', borderRadius: '50%' }}><Linkedin /></Button>
+                <Button variant="link" style={{ color: 'black'}}><Linkedin /></Button>
               </a>
               <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                <Button variant="link" style={{ color: 'black', border: '2px solid gray', borderRadius: '50%' }}><Github /></Button>
+                <Button variant="link" style={{ color: 'black'}}><Github /></Button>
               </a>
             </div>
           </div>
