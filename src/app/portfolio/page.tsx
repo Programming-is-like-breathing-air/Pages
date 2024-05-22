@@ -62,12 +62,12 @@ const Portfolio = () => {
         {/* Experience part */}
         <div ref={experienceRef}>
           <div className="mt-4 flex flex-col items-center mb-2" style={{ marginTop: '500px' }}>
-            <Label className="font-bold text-xl mb-2">Get to know more</Label>
-            <Label className="font-bold text-6xl mb-2">About Me</Label>
+            <Label className="font-bold text-xl mb-2">Get to know more about</Label>
+            <Label className="font-bold text-6xl mb-2">My Experience</Label>
           </div>
           <div className="flex mt-4" style={{ marginTop: '40px' }}>
             <img
-              src="https://www.woodsbagot.com/wp-content/uploads/legacy/93/0-2048x1739.jpg"
+              src="/portfolio.jpg"
               alt="Portfolio Image"
               className="object-cover rounded-md"
               style={{ width: '350px', height: '415px' }}
