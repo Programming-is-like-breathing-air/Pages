@@ -12,11 +12,12 @@ import {
   PageHeaderHeading,
 } from "@/components/ui/page-header"
 import { Announcement } from "@/components/ui/announcement"
-
+import GalleryWithTab from '@/components/ui/image-gallery';
 const Business = () => {
   const aboutUs = useRef<HTMLDivElement>(null);
   const developmentRef = useRef<HTMLDivElement>(null);
   const memberRef = useRef<HTMLDivElement>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
@@ -36,6 +37,7 @@ const Business = () => {
             <Button variant="link" className="text-black" onClick={() => scrollToSection(aboutUs)}>About Us</Button>
             <Button variant="link" className="text-black" onClick={() => scrollToSection(developmentRef)}>Development</Button>
             <Button variant="link" className="text-black" onClick={() => scrollToSection(memberRef)}>Team Member</Button>
+            <Button variant="link" className="text-black" onClick={() => scrollToSection(projectRef)}>Project</Button>
             <Button variant="link" className="text-black" onClick={() => scrollToSection(contactRef)}>Contact</Button>
           </div>
         </div>
@@ -70,14 +72,14 @@ const Business = () => {
       </div>
 
       <div className="mt-32">
-        {/* Experience part */}
-        <div ref={developmentRef}>
-          <div className="mt-4 flex flex-col items-center mb-2">
+        {/* Development part */}
+        <div>
+          <div ref={developmentRef} className="mt-4 flex flex-col items-center mb-2">
             <Label className="font-bold text-5xl mb-2">Development Updates</Label>
             <Label className="font-bold text-xl mb-2">Updates from the development group and faculties</Label>
 
           </div>
-          <div className="mt-3" style={{ marginLeft: '100px', marginTop: '40px', marginRight: '100px', marginBottom: '100px' }}>
+          <div className="mt-3" style={{ marginLeft: '10%', marginTop: '40px', marginRight: '10%', marginBottom: '100px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
                 <Card className="max-w-md bg-white rounded-md shadow-sm overflow-hidden">
@@ -143,26 +145,29 @@ const Business = () => {
           </div>
         </div>
 
+        {/* Team member part */}
+
+        <div ref={memberRef} className="mt-4 flex flex-col items-center mb-2" style={{ marginBottom: '50px' }}>
+          <Label className="font-bold text-5xl mb-2">Team member</Label>
+          <Label className="font-bold text-xl mb-2">Updates from the development group and faculties</Label>
+
+        </div>
+        <div className="flex flex-col items-center mb-2" style={{ marginBottom: '100px' }}>
+          <AccordionListAvatar />
+        </div>
         {/* Project part */}
-        
-          <div className="mt-4 flex flex-col items-center mb-2" style={{ marginBottom: '50px' }}> 
-            <Label className="font-bold text-5xl mb-2">Team member</Label>
+          <div ref={projectRef} className="mt-4 flex flex-col items-center mb-2" style={{ marginBottom: '50px' }}>
+            <Label className="font-bold text-5xl mb-2">Project</Label>
             <Label className="font-bold text-xl mb-2">Updates from the development group and faculties</Label>
 
           </div>
-            <div ref={memberRef} className="flex flex-col items-center mb-2" style={{ marginBottom: '100px' }}>
-          <AccordionListAvatar />
-        </div>
-        {/* <div ref={projectRef}>
-          <div className="mt-4 flex items-center mb-2" style={{ marginTop: '500px' }}>
-            <img
-              src="https://www.woodsbagot.com/wp-content/uploads/legacy/93/0-2048x1739.jpg"
-              alt="Project Image"
-              className="object-cover rounded-md"
-              style={{ width: '300px', height: '400px' }}
-            />
+          <div className="flex flex-col items-center mb-2" style={{ marginLeft: '10%',  marginRight: '10%',marginBottom: '100px' }}>
+            
+            <GalleryWithTab />
+       
           </div>
-        </div> */}
+        
+        
 
         {/* Contact part */}
         {/* <div ref={contactRef} className="mt-4 flex items-center mb-2" style={{ marginTop: '500px' }}>
