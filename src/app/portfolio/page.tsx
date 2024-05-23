@@ -49,7 +49,7 @@ const Portfolio = () => {
   return (
     <>
       <Toaster />
-      <div className="w-full flex flex-col items-center border border-gray-300 p-4 rounded-lg">
+      <div className="w-full flex flex-col items-center ">
         {/* Secondary Navigation Bar */}
         <div className="w-full flex items-center justify-between border-b border-gray-300 pb-2 mb-4 fixed top-16 left-0 bg-white z-10" style={{ height: '70px' }}>
           <div className="container mx-auto flex items-center justify-between px-4">
@@ -310,7 +310,7 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="flex flex-col space-y-4 max-w-4xl mx-auto p-4" style={{ marginTop: '30px'}}>
+            <div className="flex flex-col space-y-4 max-w-4xl mx-auto p-4" style={{ marginTop: '30px' }}>
               <div className="flex items-center">
                 <Label className="w-24 text-right mr-4">Name</Label>
                 <Input placeholder="Your name.." style={{ width: '1000px' }} id="name"
@@ -342,9 +342,25 @@ const Portfolio = () => {
                 <Button variant="destructive" className="bg-orange-500 text-white" onClick={onSubmit}>Submit</Button>
               </div>
             </div>
+
+
           </div>
         </div>
+
+        
       </div>
+      {/* Buttom NavBar */}
+      <div className="w-full bg-black text-white py-4 mt-8" style={{ height: '150px', marginTop:'100px'}}>
+      <div className="flex justify-center space-x-16" style={{marginTop:'15px'}}>
+        <Button variant="link" className="text-white text-bold text-2xl" onClick={() => scrollToSection(aboutMeRef)}>About Me</Button>
+        <Button variant="link" className="text-white text-bold text-2xl" onClick={() => scrollToSection(experienceRef)}>Experience</Button>
+        <Button variant="link" className="text-white text-bold text-2xl" onClick={() => scrollToSection(projectRef)}>Project</Button>
+        <Button variant="link" className="text-white text-bold text-2xl" onClick={() => scrollToSection(contactRef)}>Contact</Button>
+      </div>
+      <div className="text-center mt-4" style={{marginTop:'25px'}}>
+        <span>Copyright © 2024 Yuqing Wu. All Rights Reserved.</span>
+      </div>
+    </div>
 
     </>
 
