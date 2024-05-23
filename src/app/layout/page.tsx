@@ -136,7 +136,7 @@ const Layout = () => {
           </BreadcrumbList>
         </Breadcrumb>
 
-        <section style={styles.titleRow} aria-label="title and article navigation">
+        <section style={{ ...styles.titleRow, paddingLeft: '20px', paddingRight: '20px' }} aria-label="title and article navigation">
           <div style={styles.left}>
             <h1 style={styles.pageTitle}>Page Title</h1>
             <div style={styles.underline}>
@@ -169,6 +169,7 @@ const Layout = () => {
           </div>
         </section>
 
+
         <section style={{ ...styles.row, display: 'flex', justifyContent: 'space-between', padding: '20px' }} id="first">
           <h2 style={{ flex: '1', textAlign: 'left', fontWeight: 'bold', fontSize: '24px' }}>Heading 1</h2>
           <div style={{ flex: '2', display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: '20px' }} >
@@ -198,61 +199,67 @@ const Layout = () => {
             </div>
           </div>
         </section>
+
         <section style={{ ...styles.row, display: 'flex', justifyContent: 'space-between', padding: '20px' }} id="second">
           <h2 style={{ flex: '1', textAlign: 'left', fontWeight: 'bold', fontSize: '24px' }}>Heading 2</h2>
-          <div style={{ flex: '2', marginLeft: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Card className="max-w-lg bg-white rounded-lg shadow-sm overflow-hidden flex" style={{ width: '100%' }}>
-              <div className="w-1/2">
-                <img
-                  src={imageUrl}
-                  alt="University Building"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="w-1/2 p-4 flex flex-col justify-between">
-                <div>
-                  <CardHeader className="mb-2">
-                    <CardTitle className="text-lg font-semibold">Contact us</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-sm">
-                      Submit a partnership enquiry, you can also make a donation by contacting the University revenue team.
-                    </CardDescription>
-                  </CardContent>
+          <div style={{ flex: '2', display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: '20px' }} >
+            <div style={{ width: '100%', backgroundColor: 'rgb(255, 255, 255)' }} >
+              <Card className="max-w-lg bg-white rounded-lg shadow-sm overflow-hidden flex" style={{ width: '100%' }}>
+                <div className="w-1/2">
+                  <img
+                    src={imageUrl}
+                    alt="University Building"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <Button className="mb-4">
-                  Explore more →
-                </Button>
-              </div>
-            </Card>
+                <div className="w-1/2 p-4 flex flex-col justify-between">
+                  <div>
+                    <CardHeader className="mb-2">
+                      <CardTitle className="text-lg font-semibold">Contact us</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-sm">
+                        Submit a partnership enquiry, you can also make a donation by contacting the University revenue team.
+                      </CardDescription>
+                    </CardContent>
+                  </div>
+                  <Button className="mb-4">
+                    Explore more →
+                  </Button>
+                </div>
+              </Card>
+            </div>
           </div>
         </section>
 
         <section style={{ ...styles.row, display: 'flex', justifyContent: 'space-between', padding: '20px' }} id="third">
           <h2 style={{ flex: '1', textAlign: 'left', fontWeight: 'bold', fontSize: '24px' }}>Heading 3</h2>
-          <div style={{ flex: '2', marginLeft: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Carousel className="w-full max-w-xs" style={{ width: '100%' }}>
-              <CarouselContent>
-                {quotes.map((quote, index) => (
-                  <CarouselItem key={index}>
-                    <div className="p-1">
-                      <Card>
-                        <CardContent className="flex items-center justify-center p-6">
-                          <div className="text-center">
-                            <p className="text-sm italic mb-4">{`"${quote.word}"`}</p>
-                            <p className="text-lg font-semibold">{`- ${quote.author}`}</p>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+          <div style={{ flex: '2', display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: '20px' }} >
+            <div style={{ width: '100%', backgroundColor: 'rgb(255, 255, 255)' }} >
+              <Carousel className="w-full max-w-xs" style={{ width: '100%' }}>
+                <CarouselContent>
+                  {quotes.map((quote, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <Card>
+                          <CardContent className="flex items-center justify-center p-6">
+                            <div className="text-center">
+                              <p className="text-sm italic mb-4">{`"${quote.word}"`}</p>
+                              <p className="text-lg font-semibold">{`- ${quote.author}`}</p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
           </div>
         </section>
+
       </main>
 
       {/* foot */}
@@ -366,7 +373,9 @@ const styles: { [key: string]: React.CSSProperties } = {
     width: '100%',
     paddingBottom: '42px',
     display: 'flex',
-    flexWrap: 'wrap' as 'wrap'
+    flexWrap: 'wrap' as 'wrap',
+    paddingLeft: '20px',
+    paddingRight: '20px',
   },
   left: {
     width: '70%',
