@@ -47,11 +47,13 @@ const suggestionsStyle: React.CSSProperties = {
 
 const suggestionItemStyle: React.CSSProperties = {
   marginBottom: '10px',
+  color: 'gray',  // 设置为灰色
 };
 
 const contactStyle: React.CSSProperties = {
   fontSize: '1em',
   marginBottom: '40px',
+  color: 'gray',  // 设置为灰色
 };
 
 const buttonStyle: React.CSSProperties = {
@@ -71,7 +73,7 @@ const PageNotFound: React.FC = () => {
   };
 
   if (!isMounted) {
-    return null; // Render nothing on the server
+    return null; 
   }
 
   return (

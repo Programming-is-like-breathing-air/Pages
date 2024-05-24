@@ -15,7 +15,7 @@ const AboutUs = () => {
   }
 
   return (
-    <div className='flex flex-col items-center h-full w-full mt-12 pt-[60px]'>
+    <div className='flex flex-col items-center h-full w-full mt-12'>
       <div className='flex w-[1168px]'>
         <Card className='border-none'>
           <Card className='w-[240px] block pl-[10px] pr-[23px] border-none'>
