@@ -11,7 +11,7 @@ const containerStyle: React.CSSProperties = {
   flexDirection: 'column',
   padding: '50px',
   textAlign: 'center',
-  height: '100vh', // Ensure it takes the full height of the viewport
+  height: '100vh', 
   boxSizing: 'border-box',
 };
 
