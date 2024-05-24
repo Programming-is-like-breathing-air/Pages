@@ -1,12 +1,22 @@
 'use client'
-import React from 'react'
-import { Card, CardContent, CardTitle } from '@/components/ui/card'
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-const aboutus = () => {
+const AboutUs = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // Render nothing on the server
+  }
+
   return (
-    <div className='flex flex-col items-end h-full w-[1168px] mt-12 pt-[60px]'>
-      <div className='flex w-full'>
+    <div className='flex flex-col items-center h-full w-full mt-12 pt-[60px]'>
+      <div className='flex w-[1168px]'>
         <Card className='border-none'>
           <Card className='w-[240px] block pl-[10px] pr-[23px] border-none'>
             <CardContent className='lefttitle h-[63px] leading-[63px] pl-[25px] pr-0 py-0 font-extrabold border-none'>Home</CardContent>
@@ -216,4 +226,4 @@ const aboutus = () => {
   );
 };
 
-export default aboutus;
+export default AboutUs;
