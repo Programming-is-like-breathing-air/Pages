@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation'; 
 import { Button } from '../../components/ui/button'; 
 
@@ -10,6 +10,8 @@ const containerStyle: React.CSSProperties = {
   alignItems: 'center',
   padding: '50px',
   textAlign: 'left',
+  height: '100vh',
+  boxSizing: 'border-box',
 };
 
 const textContainerStyle: React.CSSProperties = {
@@ -52,21 +54,25 @@ const contactStyle: React.CSSProperties = {
   marginBottom: '40px',
 };
 
-const errorCodeStyle: React.CSSProperties = {
-  fontSize: '1.5em',
-  marginBottom: '40px',
-};
-
 const buttonStyle: React.CSSProperties = {
   marginTop: '20px',
 };
 
 const PageNotFound: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const goToHomePage = () => {
     router.push('/');
   };
+
+  if (!isMounted) {
+    return null; // Render nothing on the server
+  }
 
   return (
     <div style={containerStyle}>
