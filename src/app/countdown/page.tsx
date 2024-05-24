@@ -1,12 +1,17 @@
-import React from 'react'
+import { Scountdown , Countdown } from '@/components/ui/countdown';
+import React from 'react';
+import "@/styles/globals.css";
+function CountdownStatistic() {
+    return (
 
-
-const countdown = () => {
-  return (
-    <div className='w-full'>
-        This is countdown page
-    </div>
-  )
+        <div>
+            <h1>Countdown</h1>
+            <Scountdown />
+            <br />
+            <h1>Day Level</h1>
+            <Countdown />
+        </div>
+    );
 }
 
-export default countdown
+export default CountdownStatistic;
