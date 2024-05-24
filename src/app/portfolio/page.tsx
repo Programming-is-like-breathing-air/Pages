@@ -47,6 +47,46 @@ const Portfolio = () => {
   }
 
   return (
+
+    <div className="w-full flex flex-col items-center border border-gray-300 p-4 rounded-lg">
+      {/* Secondary Navigation Bar */}
+      <div className="w-full flex items-center justify-between border-b border-gray-300 pb-2 mb-4 fixed top-16 left-0 bg-white z-10" style={{ height: '70px' }}>
+        <div className="container mx-auto flex items-center justify-between px-4">
+          <Label className="text-3xl font-bold tracking-tight">Portfolio</Label>
+          <div className="flex space-x-4 ml-auto">
+            <Button variant="link" className="text-black" onClick={() => scrollToSection(aboutMeRef)}>About Me</Button>
+            <Button variant="link" className="text-black" onClick={() => scrollToSection(experienceRef)}>Experience</Button>
+            <Button variant="link" className="text-black" onClick={() => scrollToSection(projectRef)}>Project</Button>
+            <Button variant="link" className="text-black" onClick={() => scrollToSection(contactRef)}>Contact</Button>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="mt-32">
+        {/* AboutMe part */}
+        <div ref={aboutMeRef} style={{ paddingTop: '280px', marginTop: '-150px' }}>
+          <div className="mt-4 flex items-center mb-2">
+            <Avatar style={{ marginRight: '10px', width: '350px', height: '350px', border: '2px solid #e8e8e8' }}>
+              <AvatarImage src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+            </Avatar>
+            <div className="flex flex-col ml-4 items-center text-center" style={{ marginLeft: '90px', marginTop: '20px' }}>
+              <Label className="font-bold text-xl mb-2">Hi! I am</Label>
+              <Label className="font-bold text-6xl mb-2">User Name</Label>
+              <Label className="text-sm text-gray-500 text-2xl mb-4">User Description</Label>
+              <div className="flex space-x-4" style={{ marginTop: '10px' }}>
+                <Button variant="default">Download CV</Button>
+                <Button variant="default">Contact Info</Button>
+              </div>
+              <div className="flex space-x-1" style={{ marginTop: '10px' }}>
+                <a href="https://au.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="link" style={{ color: 'black' }}><Linkedin /></Button>
+                </a>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="link" style={{ color: 'black' }}><Github /></Button>
+                </a>
+              </div>
+
     <>
       <Toaster />
       <div className="w-full flex flex-col items-center ">
@@ -59,6 +99,7 @@ const Portfolio = () => {
               <Button variant="link" className="text-black" onClick={() => scrollToSection(experienceRef)}>Experience</Button>
               <Button variant="link" className="text-black" onClick={() => scrollToSection(projectRef)}>Project</Button>
               <Button variant="link" className="text-black" onClick={() => scrollToSection(contactRef)}>Contact</Button>
+
             </div>
           </div>
         </div>
@@ -350,6 +391,10 @@ const Portfolio = () => {
 
         
       </div>
+
+
+    </div>
+
       {/* Buttom NavBar */}
       {/* <div className="w-full bg-black text-white py-4 mt-8" style={{ height: '150px', marginTop:'100px'}}>
       <div className="flex justify-center space-x-16" style={{marginTop:'15px'}}>
@@ -364,6 +409,7 @@ const Portfolio = () => {
     </div> */}
 
     </>
+
 
 
 
