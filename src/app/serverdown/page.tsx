@@ -1,7 +1,7 @@
 
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '../../components/ui/button'; 
 
@@ -12,6 +12,8 @@ const containerStyle: React.CSSProperties = {
   flexDirection: 'column',
   padding: '50px',
   textAlign: 'center',
+  height: '100vh', // Ensure it takes the full height of the viewport
+  boxSizing: 'border-box',
 };
 
 const oopsImageStyle: React.CSSProperties = {
@@ -35,15 +37,26 @@ const buttonStyle: React.CSSProperties = {
 };
 
 const ServerDown: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const goToHomePage = () => {
     router.push('/');
   };
 
+
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
+
+
+  if (!isMounted) {
+    return null; // Render nothing on the server
+  }
 
 
   return (
