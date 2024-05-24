@@ -174,7 +174,7 @@ const Business = () => {
 
           </div>
           <div className="flex flex-col items-center mb-2" style={{ marginLeft: '10%',  marginRight: '10%',marginBottom: '100px' }}>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.7210545858634!2d151.18624108204475!3d-33.88820087012621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1d4ab9ef1d9%3A0x1d017d69037a07c0!2sThe%20University%20of%20Sydney!5e0!3m2!1sen!2sau!4v1716444001018!5m2!1sen!2sau" width="1600" height="900" loading="lazy" ></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.7210545858634!2d151.18624108204475!3d-33.88820087012621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1d4ab9ef1d9%3A0x1d017d69037a07c0!2sThe%20University%20of%20Sydney!5e0!3m2!1sen!2sau!4v1716444001018!5m2!1sen!2sau" width="1024" height="768" loading="lazy" ></iframe>
        </div> 
       </div>
     </div>
