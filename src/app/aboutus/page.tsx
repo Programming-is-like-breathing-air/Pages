@@ -11,7 +11,7 @@ const AboutUs = () => {
   }, []);
 
   if (!isMounted) {
-    return null; // Render nothing on the server
+    return null; 
   }
 
   return (
