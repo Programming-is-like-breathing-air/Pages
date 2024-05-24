@@ -261,76 +261,7 @@ const Layout = () => {
         </section>
 
       </main>
-
-      {/* foot */}
-      <footer style={{
-        padding: '20px',
-        backgroundColor: '#222',
-        color: '#fff',
-        textAlign: 'center'
-      }}>
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          padding: '20px 0',
-          borderBottom: '1px solid #444'
-        }}>
-          <div style={{ flex: '1', margin: '10px' }}>
-            <img src={imageUrl} alt="University of Sydney" style={{ width: '150px', marginBottom: '20px' }} />
-            <p>Sidere mens eadem mutato,</p>
-            <p>The stars change, the mind remains the same</p>
-            <div style={{ marginTop: '10px' }}>
-              <span className="icon">{/* SVG for social icons */}</span>
-              <span className="icon">{/* SVG for social icons */}</span>
-              <span className="icon">{/* SVG for social icons */}</span>
-              <span className="icon">{/* SVG for social icons */}</span>
-            </div>
-          </div>
-          <div style={{ flex: '3', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1', margin: '10px' }}>
-              <div style={{ fontWeight: 'bold', marginBottom: '10px' }}>Media</div>
-              <div>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>News</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Find an expert</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Media contacts</button>
-              </div>
-            </div>
-            <div style={{ flex: '1', margin: '10px' }}>
-              <div style={{ fontWeight: 'bold', marginBottom: '10px' }}>Student links</div>
-              <div>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>How to log in to University systems</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Key dates</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Class timetables</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Policies</button>
-              </div>
-            </div>
-            <div style={{ flex: '1', margin: '10px' }}>
-              <div style={{ fontWeight: 'bold', marginBottom: '10px' }}>About us</div>
-              <div>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Our rankings</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Faculties and schools</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Research centres</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Campus locations</button>
-              </div>
-            </div>
-            <div style={{ flex: '1', margin: '10px' }}>
-              <div style={{ fontWeight: 'bold', marginBottom: '10px' }}>Connect</div>
-              <div>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Contact us</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Find a staff member</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Careers at Sydney</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Find an event</button>
-                <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: '5px 0' }}>Emergencies and personal safety</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{ padding: '10px 0', borderTop: '1px solid #444', marginTop: '20px' }}>
-          <p>&copy; 2023 The University of Sydney | ABN: 15 211 513 464 | CRICOS: 00026A</p>
-          <p>Leadership for good starts here</p>
-        </div>
-      </footer>
+      
     </div>
   );
 };
