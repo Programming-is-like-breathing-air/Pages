@@ -350,7 +350,7 @@ const Portfolio = () => {
         
       </div>
       {/* Buttom NavBar */}
-      <div className="w-full bg-black text-white py-4 mt-8" style={{ height: '150px', marginTop:'100px'}}>
+      {/* <div className="w-full bg-black text-white py-4 mt-8" style={{ height: '150px', marginTop:'100px'}}>
       <div className="flex justify-center space-x-16" style={{marginTop:'15px'}}>
         <Button variant="link" className="text-white text-bold text-2xl" onClick={() => scrollToSection(aboutMeRef)}>About Me</Button>
         <Button variant="link" className="text-white text-bold text-2xl" onClick={() => scrollToSection(experienceRef)}>Experience</Button>
@@ -360,7 +360,7 @@ const Portfolio = () => {
       <div className="text-center mt-4" style={{marginTop:'25px'}}>
         <span>Copyright © 2024 Yuqing Wu. All Rights Reserved.</span>
       </div>
-    </div>
+    </div> */}
 
     </>
 
