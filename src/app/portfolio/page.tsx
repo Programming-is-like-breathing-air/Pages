@@ -31,6 +31,7 @@ const Portfolio = () => {
         </div>
       </div>
 
+
       <div className="mt-32">
         {/* AboutMe part */}
         <div ref={aboutMeRef} style={{ paddingTop: '280px', marginTop: '-150px' }}>
@@ -104,6 +105,7 @@ const Portfolio = () => {
           <div>Contact Info</div>
         </div>
       </div>
+
     </div>
   );
 }

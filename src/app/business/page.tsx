@@ -1,3 +1,4 @@
+
 "use client"
 import React, { useRef } from 'react';
 import { Button } from '@/components/ui/button';
@@ -24,8 +25,14 @@ const Business = () => {
     ref.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import { Label } from '@/components/ui/label'
+
+
 
   return (
+
 
     //<div className="w-full flex flex-col items-center border border-gray-300 p-4 rounded-lg">
     <div>
@@ -39,9 +46,22 @@ const Business = () => {
             <Button variant="link" className="text-black" onClick={() => scrollToSection(memberRef)}>Team Member</Button>
             <Button variant="link" className="text-black" onClick={() => scrollToSection(projectRef)}>Project</Button>
             <Button variant="link" className="text-black" onClick={() => scrollToSection(mapRef)}>Map</Button>
+
+    <div className="w-full flex flex-col items-center border border-gray-300 p-4 rounded-lg">
+      {/* Secondary Navigation Bar */}
+      <div className="w-full flex items-center justify-between border-b border-gray-300 pb-2 mb-4 fixed top-16 left-0 bg-white z-10" style={{ height: '70px' }}>
+        <div className="container mx-auto flex items-center justify-between px-4" >
+          <Label className="text-3xl font-bold tracking-tight">Portfolio</Label>
+          <div className="flex space-x-4 ml-auto">
+            <Button variant="link" className="text-black">About Me</Button>
+            <Button variant="link" className="text-black">Experience</Button>
+            <Button variant="link" className="text-black">Project</Button>
+            <Button variant="link" className="text-black">Contact</Button>
+
           </div>
         </div>
       </div>
+
 
       {/* AboutUs part */}
       <div ref={aboutUs} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -177,6 +197,8 @@ const Business = () => {
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.7210545858634!2d151.18624108204475!3d-33.88820087012621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1d4ab9ef1d9%3A0x1d017d69037a07c0!2sThe%20University%20of%20Sydney!5e0!3m2!1sen!2sau!4v1716444001018!5m2!1sen!2sau" width="1024" height="768" loading="lazy" ></iframe>
        </div> 
       </div>
+
+
     </div>
   );
 }
