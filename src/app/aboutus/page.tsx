@@ -1,28 +1,12 @@
 'use client'
-
 import React from 'react'
-
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
-
-import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardTitle } from '@/components/ui/card';
-
 import { Button } from '@/components/ui/button';
 
-const AboutUs = () => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null; // Render nothing on the server
-  }
-
+const aboutus = () => {
   return (
-    <div className='flex flex-col items-center h-full w-full mt-12 pt-[60px]'>
-      <div className='flex w-[1168px]'>
+    <div className='flex flex-col items-end h-full w-[1168px] mt-12 pt-[60px]'>
+      <div className='flex w-full'>
         <Card className='border-none'>
           <Card className='w-[240px] block pl-[10px] pr-[23px] border-none'>
             <CardContent className='lefttitle h-[63px] leading-[63px] pl-[25px] pr-0 py-0 font-extrabold border-none'>Home</CardContent>
@@ -228,30 +212,8 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-
-import { Button } from '@/components/ui/button'
-import { Label } from '@/components/ui/label'
-
-
-const aboutus = () => {
-  return (
-    <div className="w-full flex flex-col items-center border border-gray-300 p-4 rounded-lg">
-      {/* Secondary Navigation Bar */}
-      <div className="w-full flex items-center justify-between border-b border-gray-300 pb-2 mb-4 fixed top-16 left-0 bg-white z-10" style={{ height: '70px' }}>
-        <div className="container mx-auto flex items-center justify-between px-4" >
-          <Label className="text-3xl font-bold tracking-tight">Portfolio</Label>
-          <div className="flex space-x-4 ml-auto">
-            <Button variant="link" className="text-black">About Me</Button>
-            <Button variant="link" className="text-black">Experience</Button>
-            <Button variant="link" className="text-black">Project</Button>
-            <Button variant="link" className="text-black">Contact</Button>
-          </div>
-        </div>
-      </div>
-
-
     </div>
   );
 };
 
-export default AboutUs;
+export default aboutus;
